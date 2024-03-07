@@ -56,7 +56,7 @@ int c(vector<int> &a, int mid, int m) {
     int n = a.size();
 
     for (int i = 0; i < n; i++) {
-        if (a[i] == 0) {
+        if (!(a[i])) {
             continue;
         }
         int q = (log2(a[i]) / log2(mid)) + 1;
