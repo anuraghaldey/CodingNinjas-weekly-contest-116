@@ -82,5 +82,5 @@ int minKValue(int n, int m, vector<int> &a) {
     int l = 2;
     int h = *max_element(a.begin(), a.end());
     h = max(h, l + 1);
-    return bs(a,l,h,ans,m)?bs(a,l,h,ans,m):-1;
+    return bs(a, l, h, ans, m) ? bs(a, l, h, ans, m) : -1;
 }
