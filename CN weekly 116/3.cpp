@@ -51,6 +51,9 @@
 
 // Time Limit: 1 sec
 
+int q(int a, int b) {
+    return (log2(a) / log2(b)) + 1; 
+}
 int c(vector<int> &a, int mid, int m) {
     int st = 0;
     int n = a.size();
@@ -59,8 +62,7 @@ int c(vector<int> &a, int mid, int m) {
         if (!(a[i])) {
             continue;
         }
-        int q = (log2(a[i]) / log2(mid)) + 1;
-        st = max(st, q);
+        st = max(st, q(a[i], mid));
     }
     return st <= m;
 }
